@@ -1,4 +1,4 @@
-import {capitalize, reverseString, calculator, caesarCipher} from './myFunctions';
+import {capitalize, reverseString, calculator, caesarCipher, analyzeArray} from './myFunctions';
 
 test('Capitalize function #1', () => {
   expect(capitalize('abc')).toBe('A');
@@ -45,6 +45,15 @@ test('caesarCipher #2', () => {
     .toBe('Qtwjr nuxzr itqtw xny frjy, htsxjhyjyzw finunxhnsl jqny, xji it jnzxrti yjrutw nshninizsy zy qfgtwj jy itqtwj rflsf fqnvzf.')
 })
 
-test('caesarCipher #1', () => {
+test('caesarCipher #3', () => {
   expect(caesarCipher('Hello, Caesar!', 15)).toBe('Wtaad, Rpthpg!')
 })
+
+test('analyzeArray', () => {
+  expect(analyzeArray([1,8,3,4,2,6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6
+  });
+});

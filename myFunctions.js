@@ -31,5 +31,15 @@ function caesarCipher (str, amount) {
   }
   return output;
 };
+
+function analyzeArray(arr) {
+  const average = arr.reduce((sum, current) => sum + current, 0) / arr.length;
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+  console.log(min);
+  console.log(max);
+  const length = arr.length;
+  return {average, min, max, length};
+}
   
-export {capitalize, reverseString, calculator, caesarCipher};
+export {capitalize, reverseString, calculator, caesarCipher, analyzeArray};
